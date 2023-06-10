@@ -19,6 +19,8 @@ docker-compose up -d
 ### `ทำการติดตั้ง Database`
 
 ```
+docker-compose exec app bash
+
 composer start-db
 ```
 
