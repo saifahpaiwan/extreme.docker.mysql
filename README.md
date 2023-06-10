@@ -27,8 +27,8 @@ composer start-db
 
 ### ข้อ 1 ให้เขียนที่ทำการแสดงผลการสุ่มไอเทมที่ได้จากลิสต์ข้างบนนี้ เป็นจำนวน 100 ครั้งโดยมีข้อกำหนดว่า ไอเทมที่สุ่มได้จะต้องไม่เกิน stock ที่กำหนดไว้ ในกรณีที่เกินกำหนด stock ไว้ ให้ทำการสุ่มใหม่จนกว่าจะได้
 
-#### หน้าสำหรับการสุ่มไอเทม => http://localhost:8000/
-#### Code การสุ่มไอเทม => app/Http/Controllers/ItemgameController.php
+- หน้าสำหรับการสุ่มไอเทม => http://localhost:8000/
+- Code การสุ่มไอเทม => app/Http/Controllers/ItemgameController.php
 
 ### ข้อ 2 ให้เขียน จัดทำ Rest API ที่ใช้จัดการกับข้อมูลของ User Account พร้อม Input Validation โดยมีรายละเอียด
  
