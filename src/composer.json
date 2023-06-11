@@ -51,17 +51,7 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "start-project": [
-            "chmod -R 775 storage bootstrap/cache",
-            "sudo chown -R $USER:www-data storage",
-            "sudo chown -R $USER:www-data bootstrap/cache",
-            "chmod -R 775 public",
-            "sudo chown -R $USER:www-data public",
-            "sudo chown -R $USER:www-data public",
-            "@php artisan cache:clear",
-            "@php artisan route:clear",
-            "@php artisan config:clear",
-            "@php artisan view:clear", 
+        "start-db": [ 
             "@php artisan migrate:fresh",
             "@php artisan db:seed --class=UserSeeder",
             "@php artisan db:seed --class=ItemGeamSeeder"
