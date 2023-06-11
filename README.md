@@ -20,8 +20,36 @@ docker-compose up -d
 
 ```
 docker-compose exec app bash
-
 composer start-db
+
+or
+
+cd src 
+composer start-db
+```
+
+### กรณีติด Permissions
+
+```
+cd src 
+
+chmod -R 775 storage bootstrap/cache
+sudo chown -R $USER:www-data storage
+sudo chown -R $USER:www-data bootstrap/cache
+chmod -R 775 public
+sudo chown -R $USER:www-data public
+sudo chown -R $USER:www-data public
+```
+
+### กรณีต้องการ Clear Cache
+
+```
+cd src 
+
+php artisan cache:clear
+php artisan route:clear
+php artisan config:clear
+php artisan view:clear
 ```
 
 - เมื่อติดตั้งเสร็จแล้วระบบจะทำการ migrate และ seeder Database เข้าฐานข้อมูล
