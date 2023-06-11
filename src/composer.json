@@ -51,11 +51,19 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "start-db": [
+        "start-project": [
+            "chmod 664 /var/www/storage/logs/laravel.log",
+            "chown ubuntu:ubuntu /var/www/storage/logs/laravel.log",
+            "chmod 664 /var/www/bootstrap/cache",
+            "chown ubuntu:ubuntu /var/www/bootstrap/cache",
+            "@php artisan cache:clear",
+            "@php artisan route:clear",
+            "@php artisan config:clear",
+            "@php artisan view:clear", 
             "@php artisan migrate:fresh",
             "@php artisan db:seed --class=UserSeeder",
             "@php artisan db:seed --class=ItemGeamSeeder"
-        ] 
+        ]
     },
     "extra": {
         "laravel": {
