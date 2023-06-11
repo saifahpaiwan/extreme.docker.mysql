@@ -52,10 +52,12 @@
             "@php artisan key:generate --ansi"
         ],
         "start-project": [
-            "chmod 664 /var/www/storage/logs/laravel.log",
-            "chown ubuntu:ubuntu /var/www/storage/logs/laravel.log",
-            "chmod 664 /var/www/bootstrap/cache",
-            "chown ubuntu:ubuntu /var/www/bootstrap/cache",
+            "chmod -R 775 storage bootstrap/cache",
+            "sudo chown -R $USER:www-data storage",
+            "sudo chown -R $USER:www-data bootstrap/cache",
+            "chmod -R 775 public",
+            "sudo chown -R $USER:www-data public",
+            "sudo chown -R $USER:www-data public",
             "@php artisan cache:clear",
             "@php artisan route:clear",
             "@php artisan config:clear",
