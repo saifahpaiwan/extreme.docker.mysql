@@ -20,17 +20,17 @@ docker-compose up -d
 
 ```
 docker-compose exec app bash
-composer start-db
-
 or
-
 cd src 
+
 composer start-db
 ```
 
 ### กรณีติด Permissions
 
 ```
+docker-compose exec app bash
+or
 cd src 
 
 chmod -R 775 storage bootstrap/cache
@@ -44,6 +44,8 @@ sudo chown -R $USER:www-data public
 ### กรณีต้องการ Clear Cache
 
 ```
+docker-compose exec app bash
+or
 cd src 
 
 php artisan cache:clear
