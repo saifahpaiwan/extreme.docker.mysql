@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\itemgame;
+use App\Models\User;
 
 class ItemgameController extends Controller
 {
@@ -12,7 +13,7 @@ class ItemgameController extends Controller
         $items = itemgame::all();
         return view('index', compact('items'));
     }
-
+ 
     public function randomitem(Request $request)
     {
         $itemloop = $request->qty;

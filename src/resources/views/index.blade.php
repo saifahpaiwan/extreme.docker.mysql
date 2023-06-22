@@ -28,7 +28,7 @@
             @if(isset($items) && count($items)>0)
             @foreach($items as $row)
             <div class="col-md-2">
-                <div class="card mb-2">
+                <div class="card mb-2 bg-warning">
                     <div class="card-body">
                         <h6 class="card-title">{{ $row->name }}</h6>
                         <div>#ID : {{ $row->game_item_id }}</div>
